@@ -1,0 +1,86 @@
+.guide {
+  background: radial-gradient(ellipse at 93% 2%, #f0e3c9, transparent 33rem), var(--canvas);
+}
+.guide-layout { max-width: 70rem; padding-block: 1.1rem 2.8rem; }
+.illustrated-book {
+  --book-paper: #fff9ec;
+  overflow: hidden;
+  background: var(--book-paper);
+  border: 1px solid #e0d1b4;
+  border-radius: .8rem;
+  box-shadow: 0 .45rem 1.7rem #5b4a2a15;
+}
+.guide-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: clamp(.85rem, 2vh, 1.45rem) clamp(1rem, 3.8vw, 3rem);
+  background: linear-gradient(122deg, #fbf1d9, #f1e1c0);
+}
+.guide-title h1 {
+  font: 700 clamp(1.95rem, 4.4vw, 3.65rem)/1.12 var(--serif);
+  text-wrap: balance;
+}
+.guide-title img { width: clamp(3.5rem, 6vw, 5.25rem); height: auto; flex: none; }
+.guide-page {
+  display: grid;
+  grid-template-columns: minmax(0, .97fr) minmax(0, 1.03fr);
+  gap: clamp(1.25rem, 4.35vw, 3rem);
+  align-items: center;
+  padding: clamp(1.55rem, 3.8vw, 3rem);
+  border-top: 1px solid #e6dac3;
+}
+.guide-page:nth-of-type(even) { background: #fbf3e1; }
+.chapter-number {
+  display: inline-block;
+  background: #eee1c5;
+  border-radius: 2rem;
+  padding: .2rem .66rem;
+  font-size: .86rem;
+  font-weight: 750;
+  color: #654730;
+}
+.guide-copy h2 {
+  font: 700 clamp(1.52rem, 3.15vw, 2.7rem)/1.17 var(--serif);
+  text-wrap: balance;
+  margin-block: .42em .47em;
+}
+.guide-copy ol { counter-reset: step; list-style: none; padding: 0; margin: 0; }
+.guide-copy li {
+  display: grid;
+  grid-template-columns: 1.65rem minmax(0, 1fr);
+  gap: .55rem;
+  align-items: start;
+  margin: .64rem 0;
+  font-size: clamp(.98rem, 1.6vw, 1.1rem);
+}
+.guide-copy li::before {
+  counter-increment: step;
+  content: counter(step);
+  width: 1.55rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 1.55rem;
+  background: #e4eadc;
+  color: var(--green-dark);
+  font-size: .84rem;
+  font-weight: 800;
+}
+.guide-note { color: #4a5147; font-size: .91rem; border-left: 3px solid #a9b293; padding-left: .65rem; margin-top: 1rem; }
+.guide-art { margin: 0; min-width: 0; }
+.guide-art img { width: 100%; height: auto; border: 1px solid #ddd0b1; border-radius: .58rem; background: #f5e8cb; }
+.guide-art figcaption { color: #554c3e; margin-top: .55rem; text-align: center; font-size: .86rem; }
+.guide-end { border-top: 1px solid #e6dac3; color: var(--green); text-align: center; padding: 1rem; font-weight: 700; }
+
+@media (max-width: 730px) {
+  .guide-page { grid-template-columns: 1fr; gap: .9rem; }
+}
+@media (max-width: 440px) {
+  .guide-layout { width: calc(100% - 1.35rem); }
+  .guide-title, .guide-page { padding-inline: 1rem; }
+  .guide-title { gap: .4rem; }
+  .guide-title h1 { font-size: 1.78rem; }
+  .guide-title img { width: 3.5rem; }
+}
