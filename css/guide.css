@@ -73,6 +73,7 @@
 .guide-art img { width: 100%; height: auto; border: 1px solid #ddd0b1; border-radius: .58rem; background: #f5e8cb; }
 .guide-art figcaption { color: #554c3e; margin-top: .55rem; text-align: center; font-size: .86rem; }
 .guide-end { border-top: 1px solid #e6dac3; color: var(--green); text-align: center; padding: 1rem; font-weight: 700; }
+.guide-end a { display: inline-block; margin-inline: .35rem; }
 
 @media (max-width: 730px) {
   .guide-page { grid-template-columns: 1fr; gap: .9rem; }
