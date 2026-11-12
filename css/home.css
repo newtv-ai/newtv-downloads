@@ -211,6 +211,7 @@ html:has(> .detail-page) { scroll-snap-type: none; }
   letter-spacing: -.025em;
 }
 .setup-heading p { margin-top: .35rem; color: #e0ebdd; font-size: .92rem; line-height: 1.4; }
+.setup-manuals { display: flex; flex-wrap: wrap; gap: .5rem; }
 .setup-heading .button {
   flex-shrink: 0;
   border-color: #fffdf6;
