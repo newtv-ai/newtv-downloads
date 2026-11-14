@@ -309,6 +309,10 @@ html:has(> .detail-page) { scroll-snap-type: none; }
 .edition-download { color: var(--green); font-size: .78rem; font-weight: 750; text-align: end; }
 .edition-grid a:hover .edition-download { text-decoration: underline; }
 .edition-grid p { grid-column: 1 / -1; margin-top: .2rem; color: var(--muted); font-size: clamp(.85rem, 1.7vh, 1.1rem); line-height: 1.35; }
+.emulator-downloads { margin-top: 1rem; }
+.emulator-downloads .edition-grid { grid-template-rows: auto; }
+.emulator-tool { grid-column: 1 / -1; }
+.emulator-scan-help { margin-top: .6rem; overflow-wrap: anywhere; }
 .setup-device-note {
   display: flex;
   gap: .25rem .7rem;

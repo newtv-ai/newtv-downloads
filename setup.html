@@ -12,7 +12,7 @@
   <link rel="icon" href="img/favicon.png">
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
   <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/home.css?v=setup-downloads-20261112">
+  <link rel="stylesheet" href="css/home.css?v=emulator-phone-setup-20261114">
 </head>
 <body class="home detail-page setup-page">
   <a class="skip-link button small" href="#content">跳到正文</a>
@@ -69,6 +69,27 @@
             </a>
           </li>
         </ul>
+        <section class="emulator-downloads" aria-labelledby="emulator-downloads-title">
+          <h2 id="emulator-downloads-title">Android 模拟器下载</h2>
+          <ul class="edition-grid" role="list">
+            <li>
+              <a href="https://github.com/newtv-ai/newtv-downloads/releases/download/v1.0.0-beta/newtv-emulator-cn-lite-v1.0.0-beta.apk">
+                <h3>模拟器国内精简版</h3><span class="edition-download">下载 APK</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/newtv-ai/newtv-downloads/releases/download/v1.0.0-beta/newtv-emulator-cn-full-v1.0.0-beta.apk">
+                <h3>模拟器国内完整版</h3><span class="edition-download">下载 APK</span>
+              </a>
+            </li>
+            <li class="emulator-tool">
+              <a href="https://github.com/newtv-ai/newtv-downloads/releases/download/emulator-phone-setup-v1.0.0/NewTV-Emulator-Phone-Setup-Windows-x64.zip" aria-describedby="emulator-scan-help">
+                <h3>模拟器手机扫码配置工具</h3><span class="edition-download">下载 Windows x64 ZIP</span>
+              </a>
+            </li>
+          </ul>
+          <p class="setup-prompt emulator-scan-help" id="emulator-scan-help">手机扫到模拟器的内部 IP（如 <code>10.0.2.x</code>）打不开时，在 Windows 电脑上解压 ZIP，开启模拟器的 ADB 调试并打开嘟嘟喵TV，再双击 <code>Start NewTV Phone Setup.cmd</code>。让手机和电脑连同一局域网，扫电脑浏览器里显示的二维码。使用时请保持启动窗口打开。无需安装 Node.js。</p>
+        </section>
       </section>
       <p class="setup-device-note"><strong>电视实测</strong><span>标称 2 GB 的 OPPO K9，系统识别约 1.69 GiB，首页和游戏菜单可用约 183–301 MiB。完整版离线识别压力测试中，应用主进程最高采样约 450 MiB，系统剩余约 55 MiB。新安装默认关闭远场唤醒。</span></p>
     </section>
