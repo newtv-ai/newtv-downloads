@@ -282,7 +282,6 @@ html:has(> .detail-page) { scroll-snap-type: none; }
 .edition-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-template-rows: repeat(2, 1fr);
   gap: 1px;
   margin: .45rem 0 0;
   padding: 1px;
@@ -291,6 +290,7 @@ html:has(> .detail-page) { scroll-snap-type: none; }
   overflow: hidden;
   list-style: none;
 }
+.edition-grid > li:only-child { grid-column: 1 / -1; }
 .edition-grid a {
   display: grid;
   align-content: center;
@@ -310,8 +310,6 @@ html:has(> .detail-page) { scroll-snap-type: none; }
 .edition-grid a:hover .edition-download { text-decoration: underline; }
 .edition-grid p { grid-column: 1 / -1; margin-top: .2rem; color: var(--muted); font-size: clamp(.85rem, 1.7vh, 1.1rem); line-height: 1.35; }
 .emulator-downloads { margin-top: 1rem; }
-.emulator-downloads .edition-grid { grid-template-rows: auto; }
-.emulator-tool { grid-column: 1 / -1; }
 .emulator-scan-help { margin-top: .6rem; overflow-wrap: anywhere; }
 .setup-device-note {
   display: flex;
@@ -362,6 +360,5 @@ html:has(> .detail-page) { scroll-snap-type: none; }
   .home .topbar-inner { column-gap: .4rem; }
   .setup-heading, .setup-device-note { align-items: flex-start; flex-direction: column; }
   .setup-steps { grid-template-columns: 1fr; }
-  .edition-grid a { grid-template-columns: 1fr; }
-  .edition-download { grid-row: 3; margin-top: .22rem; text-align: start; }
+  .edition-grid { grid-template-columns: minmax(0, 1fr); }
 }
